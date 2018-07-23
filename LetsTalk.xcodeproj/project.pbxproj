@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		1A5E579F2104D7D8001D1879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E579E2104D7D8001D1879 /* AppDelegate.swift */; };
-		1A5E57A12104D7D8001D1879 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E57A02104D7D8001D1879 /* ViewController.swift */; };
 		1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A22104D7D8001D1879 /* Main.storyboard */; };
 		1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A52104D7D9001D1879 /* Assets.xcassets */; };
 		1A5E57A92104D7D9001D1879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A72104D7D9001D1879 /* LaunchScreen.storyboard */; };
+		1AA65F8A21059F13002B3749 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8921059F13002B3749 /* ChatViewController.swift */; };
+		1AA65F8C21059F3C002B3749 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8B21059F3C002B3749 /* LogInViewController.swift */; };
+		1AA65F8E21059F55002B3749 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8D21059F55002B3749 /* RegisterViewController.swift */; };
+		1AA65F9021059F6B002B3749 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8F21059F6B002B3749 /* WelcomeViewController.swift */; };
+		1AA65F952105A06A002B3749 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F942105A06A002B3749 /* Message.swift */; };
+		1AA65F982105A109002B3749 /* CustomMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */; };
+		1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA65F9C2105A39F002B3749 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A5E579B2104D7D8001D1879 /* LetsTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5E579E2104D7D8001D1879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A5E57A02104D7D8001D1879 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A5E57A32104D7D8001D1879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A5E57A52104D7D9001D1879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5E57A82104D7D9001D1879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A5E57AA2104D7D9001D1879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA65F8921059F13002B3749 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1AA65F8B21059F3C002B3749 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		1AA65F8D21059F55002B3749 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1AA65F8F21059F6B002B3749 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1AA65F942105A06A002B3749 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageTableViewCell.swift; sourceTree = "<group>"; };
+		1AA65F9C2105A39F002B3749 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		1A5E579D2104D7D8001D1879 /* LetsTalk */ = {
 			isa = PBXGroup;
 			children = (
-				1A5E579E2104D7D8001D1879 /* AppDelegate.swift */,
-				1A5E57A02104D7D8001D1879 /* ViewController.swift */,
-				1A5E57A22104D7D8001D1879 /* Main.storyboard */,
+				1AA65F962105A073002B3749 /* Model */,
+				1AA65F9121059F91002B3749 /* Controller */,
+				1AA65F932105A042002B3749 /* View */,
 				1A5E57A52104D7D9001D1879 /* Assets.xcassets */,
-				1A5E57A72104D7D9001D1879 /* LaunchScreen.storyboard */,
-				1A5E57AA2104D7D9001D1879 /* Info.plist */,
+				1AA65F9221059FAF002B3749 /* Supporting File */,
 			);
 			path = LetsTalk;
+			sourceTree = "<group>";
+		};
+		1AA65F9121059F91002B3749 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AA65F8921059F13002B3749 /* ChatViewController.swift */,
+				1AA65F8B21059F3C002B3749 /* LogInViewController.swift */,
+				1AA65F8D21059F55002B3749 /* RegisterViewController.swift */,
+				1AA65F8F21059F6B002B3749 /* WelcomeViewController.swift */,
+				1A5E579E2104D7D8001D1879 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AA65F9221059FAF002B3749 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				1A5E57AA2104D7D9001D1879 /* Info.plist */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		1AA65F932105A042002B3749 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A5E57A22104D7D8001D1879 /* Main.storyboard */,
+				1A5E57A72104D7D9001D1879 /* LaunchScreen.storyboard */,
+				1AA65F992105A114002B3749 /* Custom Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1AA65F962105A073002B3749 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AA65F942105A06A002B3749 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AA65F992105A114002B3749 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */,
+				1AA65F9C2105A39F002B3749 /* MessageCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5E57A92104D7D9001D1879 /* LaunchScreen.storyboard in Resources */,
+				1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */,
 				1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */,
 				1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5E57A12104D7D8001D1879 /* ViewController.swift in Sources */,
+				1AA65F8A21059F13002B3749 /* ChatViewController.swift in Sources */,
+				1AA65F982105A109002B3749 /* CustomMessageTableViewCell.swift in Sources */,
+				1AA65F9021059F6B002B3749 /* WelcomeViewController.swift in Sources */,
 				1A5E579F2104D7D8001D1879 /* AppDelegate.swift in Sources */,
+				1AA65F952105A06A002B3749 /* Message.swift in Sources */,
+				1AA65F8C21059F3C002B3749 /* LogInViewController.swift in Sources */,
+				1AA65F8E21059F55002B3749 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEJFTUUQ95;
-				INFOPLIST_FILE = LetsTalk/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LetsTalk/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PEJFTUUQ95;
-				INFOPLIST_FILE = LetsTalk/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LetsTalk/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
