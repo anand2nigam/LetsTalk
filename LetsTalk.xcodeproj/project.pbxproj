@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A20CDCE2105E850008C1754 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A20CDCD2105E850008C1754 /* GoogleService-Info.plist */; };
 		1A5E579F2104D7D8001D1879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E579E2104D7D8001D1879 /* AppDelegate.swift */; };
 		1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A22104D7D8001D1879 /* Main.storyboard */; };
 		1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A52104D7D9001D1879 /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		1AA65F952105A06A002B3749 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F942105A06A002B3749 /* Message.swift */; };
 		1AA65F982105A109002B3749 /* CustomMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */; };
 		1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA65F9C2105A39F002B3749 /* MessageCell.xib */; };
+		C1A8FE42A295AC05EEFEF4D7 /* Pods_LetsTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1856585EF0DA48591BF1F92 /* Pods_LetsTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A20CDCD2105E850008C1754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A5E579B2104D7D8001D1879 /* LetsTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5E579E2104D7D8001D1879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A5E57A32104D7D8001D1879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		1AA65F942105A06A002B3749 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageTableViewCell.swift; sourceTree = "<group>"; };
 		1AA65F9C2105A39F002B3749 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		5F5CC360BBDE0E6B376504EE /* Pods-LetsTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		A160A78CB68F8B48A60A63DB /* Pods-LetsTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk.release.xcconfig"; sourceTree = "<group>"; };
+		A1856585EF0DA48591BF1F92 /* Pods_LetsTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A8FE42A295AC05EEFEF4D7 /* Pods_LetsTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,8 @@
 			children = (
 				1A5E579D2104D7D8001D1879 /* LetsTalk */,
 				1A5E579C2104D7D8001D1879 /* Products */,
+				5595350957CDEE1CAC784E13 /* Pods */,
+				AAEC756F3BFB0612A4CC106A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5E57AA2104D7D9001D1879 /* Info.plist */,
+				1A20CDCD2105E850008C1754 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -122,6 +132,23 @@
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
+		5595350957CDEE1CAC784E13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5CC360BBDE0E6B376504EE /* Pods-LetsTalk.debug.xcconfig */,
+				A160A78CB68F8B48A60A63DB /* Pods-LetsTalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AAEC756F3BFB0612A4CC106A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1856585EF0DA48591BF1F92 /* Pods_LetsTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A5E57AD2104D7D9001D1879 /* Build configuration list for PBXNativeTarget "LetsTalk" */;
 			buildPhases = (
+				D0F05EADDD3DE89BEA5FD760 /* [CP] Check Pods Manifest.lock */,
 				1A5E57972104D7D8001D1879 /* Sources */,
 				1A5E57982104D7D8001D1879 /* Frameworks */,
 				1A5E57992104D7D8001D1879 /* Resources */,
+				ED65A33B36BBFE960F59480E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,12 +211,58 @@
 			files = (
 				1A5E57A92104D7D9001D1879 /* LaunchScreen.storyboard in Resources */,
 				1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */,
+				1A20CDCE2105E850008C1754 /* GoogleService-Info.plist in Resources */,
 				1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */,
 				1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D0F05EADDD3DE89BEA5FD760 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetsTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED65A33B36BBFE960F59480E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A5E57972104D7D8001D1879 /* Sources */ = {
@@ -342,6 +417,7 @@
 		};
 		1A5E57AE2104D7D9001D1879 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5CC360BBDE0E6B376504EE /* Pods-LetsTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +436,7 @@
 		};
 		1A5E57AF2104D7D9001D1879 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A160A78CB68F8B48A60A63DB /* Pods-LetsTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
