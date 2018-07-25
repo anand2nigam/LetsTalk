@@ -11,16 +11,14 @@ import Firebase
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
+    var messageArray: [Message] = [ Message]()
     
     @IBOutlet weak var messageTableView: UITableView!
-
-
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var messageTextField: UITextField!
-    
     @IBOutlet weak var sendButton: UIButton!
     
+    // MARK:- Sending Messages to the database
     
     @IBAction func sendPressed(_ sender: UIButton) {
         
@@ -51,6 +49,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    // Mark:- Logging out the user
 
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
@@ -84,6 +83,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Call to method to configure the cell height accordingly
        configureTableViewCellHeight()
+        
+        retrieveMessages()
         
     }
 
@@ -125,16 +126,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //configureTableViewCellHeight()
         
         // Configure the cell
-        let messageArray = ["First message", "Second Message.what is going on into the woods. I saw you hanging around with them. know your limits", "Third Message"]
         
-        cell.messageBody.text = messageArray[indexPath.row]
+        cell.messageBody.text = messageArray[indexPath.row].messageBody
+        cell.senderUserName.text = messageArray[indexPath.row].sender
+        cell.avatarImageView.image = UIImage(named: "egg")
         
         // return the cell
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return messageArray.count
     }
     
     // Method to configure TableViewCell height
@@ -145,5 +147,29 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    // MARK: - Retrieve Messages from the database
+    
+    func retrieveMessages() {
+        let messageDB = FIRDatabase.database().reference().child("Messages")
+        
+        messageDB.observe(.childAdded) { (snapshot) in
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            
+            let text = snapshotValue["MessageBody"]!
+            let sender = snapshotValue["Sender"]!
+            
+            print(text , sender)
+            
+            let message = Message()
+            message.messageBody = text
+            message.sender = sender
+            
+            self.messageArray.append(message)
+            
+            self.configureTableViewCellHeight()
+            self.messageTableView.reloadData()
+        }
+        
+    }
 
 }

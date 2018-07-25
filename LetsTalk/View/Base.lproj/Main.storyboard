@@ -162,6 +162,9 @@
                                             <constraint firstAttribute="width" constant="46" id="xmW-uk-tYR"/>
                                         </constraints>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="4g3-eF-mWK" eventType="touchUpInside" id="sH6-J6-dUG"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9z-o4-Eft">
                                         <rect key="frame" x="5" y="10" width="314" height="30"/>
