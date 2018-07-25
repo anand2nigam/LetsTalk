@@ -23,13 +23,13 @@
                         <rect key="frame" x="58" y="10" width="262" height="55"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jge-lv-Nei">
-                                <rect key="frame" x="9" y="0.0" width="255" height="14.5"/>
+                                <rect key="frame" x="9" y="0.0" width="255" height="9.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.45543920989999997" green="0.47536808250000001" blue="0.4877150059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqj-Kv-Ae9">
-                                <rect key="frame" x="9" y="19.5" width="253" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqj-Kv-Ae9">
+                                <rect key="frame" x="9" y="14.5" width="253" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Oqj-Kv-Ae9" secondAttribute="trailing" id="4uf-dE-Ob3"/>
                             <constraint firstItem="Oqj-Kv-Ae9" firstAttribute="top" secondItem="jge-lv-Nei" secondAttribute="bottom" constant="5" id="79P-CH-Tzo"/>
-                            <constraint firstAttribute="bottom" secondItem="Oqj-Kv-Ae9" secondAttribute="bottom" constant="15" id="P7I-hb-XSN"/>
+                            <constraint firstAttribute="bottom" secondItem="Oqj-Kv-Ae9" secondAttribute="bottom" constant="20" id="YfC-qo-jJL"/>
                             <constraint firstItem="jge-lv-Nei" firstAttribute="top" secondItem="J1A-8l-IG8" secondAttribute="top" id="sqh-YJ-o2q"/>
                             <constraint firstItem="Oqj-Kv-Ae9" firstAttribute="leading" secondItem="J1A-8l-IG8" secondAttribute="leading" constant="9" id="uuR-0P-6aJ"/>
                             <constraint firstItem="jge-lv-Nei" firstAttribute="leading" secondItem="J1A-8l-IG8" secondAttribute="leading" constant="9" id="v4M-bn-hcE"/>

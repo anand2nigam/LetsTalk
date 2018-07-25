@@ -9,17 +9,46 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     
     @IBOutlet weak var messageTableView: UITableView!
 
+
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var messageTextField: UITextField!
+    
     @IBOutlet weak var sendButton: UIButton!
     
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        
+        messageTextField.endEditing(true)
+        
+        messageTextField.isEnabled = false
+        sendButton.isEnabled = false
+        
+        // Creating our database in firebase for messages
+        let messageDatabase = FIRDatabase.database().reference().child("Messages")
+        // Creating a dictionary to save data in the database in which only the user id and the message is going to be saved
+        let messageDictionary = ["Sender" : FIRAuth.auth()?.currentUser?.email , "MessageBody" : messageTextField.text]
+        
+        // To save our messages in the message database through a automatically generated identifier
+        messageDatabase.childByAutoId().setValue(messageDictionary) {
+            (error , reference) in
+            if error != nil {
+                print(error!)
+            }
+            else {
+                print("Message Saved in the Database")
+                self.messageTextField.isEnabled = true
+                self.sendButton.isEnabled = true
+                
+                self.messageTextField.text = ""
+            }
+        }
+        
     }
     
 
@@ -45,11 +74,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTableView.delegate = self
         messageTableView.dataSource = self
         
+        messageTextField.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+        messageTableView.addGestureRecognizer(tapGesture)
+        
         // Registering CustomMessageConfigTableViewCell.xib file to be used
         messageTableView.register(UINib(nibName: "CustomMessageConfigTableViewCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
         // Call to method to configure the cell height accordingly
-        configureTableViewCellHeight()
+       configureTableViewCellHeight()
         
     }
 
@@ -58,6 +92,28 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK:- TextField Delegate Methods
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        
+        UIView.animate(withDuration: 0.5) {
+            self.heightConstraint.constant = 308
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 1.0) {
+            self.heightConstraint.constant = 50
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func tableViewTapped() {
+        messageTextField.endEditing(true)
+    }
     
     // MARK:- TableView DataSource Methods
     
@@ -69,7 +125,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         //configureTableViewCellHeight()
         
         // Configure the cell
-        let messageArray = ["First message", "Second Message. I am trying to find a way to move over the things so that i can do my work with more efficiency and productivity. By the way i am going to do something very big in my life in order to pursue all my dreams", "Third Message"]
+        let messageArray = ["First message", "Second Message.what is going on into the woods. I saw you hanging around with them. know your limits", "Third Message"]
         
         cell.messageBody.text = messageArray[indexPath.row]
         
@@ -86,6 +142,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func configureTableViewCellHeight() {
         messageTableView.rowHeight = UITableViewAutomaticDimension
         messageTableView.estimatedRowHeight = 120.0
+
     }
     
 
