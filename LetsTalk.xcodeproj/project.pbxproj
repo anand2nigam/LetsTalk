@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A20CDCE2105E850008C1754 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A20CDCD2105E850008C1754 /* GoogleService-Info.plist */; };
+		1A4A17EB2107882100B1BFE0 /* CustomMessageConfigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A17E92107882100B1BFE0 /* CustomMessageConfigTableViewCell.swift */; };
+		1A4A17EC2107882100B1BFE0 /* CustomMessageConfigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4A17EA2107882100B1BFE0 /* CustomMessageConfigTableViewCell.xib */; };
 		1A5E579F2104D7D8001D1879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E579E2104D7D8001D1879 /* AppDelegate.swift */; };
 		1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A22104D7D8001D1879 /* Main.storyboard */; };
 		1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5E57A52104D7D9001D1879 /* Assets.xcassets */; };
@@ -17,13 +19,13 @@
 		1AA65F8E21059F55002B3749 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8D21059F55002B3749 /* RegisterViewController.swift */; };
 		1AA65F9021059F6B002B3749 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F8F21059F6B002B3749 /* WelcomeViewController.swift */; };
 		1AA65F952105A06A002B3749 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F942105A06A002B3749 /* Message.swift */; };
-		1AA65F982105A109002B3749 /* CustomMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */; };
-		1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA65F9C2105A39F002B3749 /* MessageCell.xib */; };
 		C1A8FE42A295AC05EEFEF4D7 /* Pods_LetsTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1856585EF0DA48591BF1F92 /* Pods_LetsTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A20CDCD2105E850008C1754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A4A17E92107882100B1BFE0 /* CustomMessageConfigTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageConfigTableViewCell.swift; sourceTree = "<group>"; };
+		1A4A17EA2107882100B1BFE0 /* CustomMessageConfigTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageConfigTableViewCell.xib; sourceTree = "<group>"; };
 		1A5E579B2104D7D8001D1879 /* LetsTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5E579E2104D7D8001D1879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A5E57A32104D7D8001D1879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,8 +37,6 @@
 		1AA65F8D21059F55002B3749 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1AA65F8F21059F6B002B3749 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1AA65F942105A06A002B3749 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageTableViewCell.swift; sourceTree = "<group>"; };
-		1AA65F9C2105A39F002B3749 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		5F5CC360BBDE0E6B376504EE /* Pods-LetsTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		A160A78CB68F8B48A60A63DB /* Pods-LetsTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsTalk/Pods-LetsTalk.release.xcconfig"; sourceTree = "<group>"; };
 		A1856585EF0DA48591BF1F92 /* Pods_LetsTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +126,8 @@
 		1AA65F992105A114002B3749 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1AA65F972105A109002B3749 /* CustomMessageTableViewCell.swift */,
-				1AA65F9C2105A39F002B3749 /* MessageCell.xib */,
+				1A4A17E92107882100B1BFE0 /* CustomMessageConfigTableViewCell.swift */,
+				1A4A17EA2107882100B1BFE0 /* CustomMessageConfigTableViewCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -210,9 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5E57A92104D7D9001D1879 /* LaunchScreen.storyboard in Resources */,
-				1AA65F9D2105A39F002B3749 /* MessageCell.xib in Resources */,
 				1A20CDCE2105E850008C1754 /* GoogleService-Info.plist in Resources */,
 				1A5E57A62104D7D9001D1879 /* Assets.xcassets in Resources */,
+				1A4A17EC2107882100B1BFE0 /* CustomMessageConfigTableViewCell.xib in Resources */,
 				1A5E57A42104D7D8001D1879 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA65F8A21059F13002B3749 /* ChatViewController.swift in Sources */,
-				1AA65F982105A109002B3749 /* CustomMessageTableViewCell.swift in Sources */,
+				1A4A17EB2107882100B1BFE0 /* CustomMessageConfigTableViewCell.swift in Sources */,
 				1AA65F9021059F6B002B3749 /* WelcomeViewController.swift in Sources */,
 				1A5E579F2104D7D8001D1879 /* AppDelegate.swift in Sources */,
 				1AA65F952105A06A002B3749 /* Message.swift in Sources */,

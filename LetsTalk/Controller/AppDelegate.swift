@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FIRApp.configure()
-        let myDatabase = FIRDatabase.database().reference()
-        myDatabase.setValue("We have got the data")
+
         
         return true
     }
