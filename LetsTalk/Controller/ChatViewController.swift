@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
+import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
@@ -53,8 +55,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
+        SVProgressHUD.show()
+        
         do {
             try FIRAuth.auth()?.signOut()
+            
+            SVProgressHUD.dismiss()
         }
         catch {
             print("An error occurred while signing out")
@@ -83,6 +89,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Call to method to configure the cell height accordingly
        configureTableViewCellHeight()
+        
+        messageTableView.separatorStyle = .none
         
         retrieveMessages()
         
@@ -130,6 +138,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.messageBody.text = messageArray[indexPath.row].messageBody
         cell.senderUserName.text = messageArray[indexPath.row].sender
         cell.avatarImageView.image = UIImage(named: "egg")
+        
+        if cell.senderUserName.text == FIRAuth.auth()?.currentUser?.email as String? {
+            cell.avatarImageView.backgroundColor = UIColor.flatMint()
+            cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
+        }
+        else {
+            cell.avatarImageView.backgroundColor = UIColor.flatWatermelon()
+            cell.messageBackground.backgroundColor = UIColor.flatGray()
+        }
         
         // return the cell
         return cell
